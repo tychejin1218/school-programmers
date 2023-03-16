@@ -16,7 +16,7 @@ public class Problem120812 {
 
     int answer;
 
-    // 주어진 값을 키로 설정하고, 주어진 값의 밸류 값이 중복된 경우 1씩 증가
+    // 주어진 값을 키로 설정하고, 주어진 값의 밸류가 중복된 경우 1씩 증가
     Map<Integer, Integer> map = new HashMap<>();
     for (int num : array) {
       map.put(num, map.getOrDefault(num, 0) + 1);
