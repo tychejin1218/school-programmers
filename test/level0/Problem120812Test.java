@@ -10,11 +10,12 @@ class Problem120812Test {
   void solution01() {
 
     // Given
-    int[] array = {1, 2, 3, 3, 3, 4};
-    int expected = 3;
+    int num1 = 2;
+    int num2 = 3;
+    int expected = 5;
 
     // When
-    int result = new Problem120812().solution(array);
+    int result = new Problem120802().solution(num1, num2);
 
     // Then
     assertEquals(expected, result);
@@ -24,25 +25,12 @@ class Problem120812Test {
   void solution02() {
 
     // Given
-    int[] array = {1, 1, 2, 2};
-    int expected = -1;
+    int num1 = 100;
+    int num2 = 2;
+    int expected = 102;
 
     // When
-    int result = new Problem120812().solution(array);
-
-    // Then
-    assertEquals(expected, result);
-  }
-
-  @Test
-  void solution03() {
-
-    // Given
-    int[] array = {1};
-    int expected = 1;
-
-    // When
-    int result = new Problem120812().solution(array);
+    int result = new Problem120802().solution(num1, num2);
 
     // Then
     assertEquals(expected, result);
