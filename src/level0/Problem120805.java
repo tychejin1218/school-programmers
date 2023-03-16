@@ -3,7 +3,7 @@ package level0;
 /**
  * 몫 구하기
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/120804
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120805
  */
 public class Problem120805 {
 
