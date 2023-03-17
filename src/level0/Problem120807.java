@@ -1,9 +1,9 @@
 package level0;
 
 /**
- * 두 수의 나눗셈
+ * 숫자 비교하기
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/120806
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120807
  */
 public class Problem120807 {
 
