@@ -1,7 +1,5 @@
 package level0;
 
-import java.util.stream.IntStream;
-
 /**
  * 피자 나눠 먹기 (3)
  * <p/>
