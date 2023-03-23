@@ -1,6 +1,5 @@
 package level0;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
