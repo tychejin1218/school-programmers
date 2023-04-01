@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * 배열 회전시키기
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/120843
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120844
  */
 public class Problem120844 {
 
