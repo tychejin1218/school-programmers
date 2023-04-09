@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 /**
  * 배열 원소의 길이
  * <p/>
@@ -7,8 +9,15 @@ package level0;
  */
 public class Problem120854 {
 
+  /*public int[] solution(String[] strlist) {
+    return Arrays.stream(strlist)
+        .mapToInt(m -> m.length())
+        .toArray();
+  }*/
+
   public int[] solution(String[] strlist) {
-    int[] answer = {};
-    return answer;
+    return Arrays.stream(strlist)
+        .mapToInt(String::length)
+        .toArray();
   }
 }
