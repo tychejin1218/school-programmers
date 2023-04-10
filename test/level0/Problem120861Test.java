@@ -35,4 +35,34 @@ class Problem120861Test {
     // Then
     assertArrayEquals(expected, result);
   }
+
+  @Test
+  void solution03() {
+
+    // Given
+    String[] keyinput = {"down", "down", "down", "down", "down"};
+    int[] board = {1, 1};
+    int[] expected = {0, -1};
+
+    // When
+    int[] result = new Problem120861().solution(keyinput,board);
+
+    // Then
+    assertArrayEquals(expected, result);
+  }
+
+  @Test
+  void solution04() {
+
+    // Given
+    String[] keyinput = {};
+    int[] board = {1, 1};
+    int[] expected = {0, 0};
+
+    // When
+    int[] result = new Problem120861().solution(keyinput,board);
+
+    // Then
+    assertArrayEquals(expected, result);
+  }
 }
