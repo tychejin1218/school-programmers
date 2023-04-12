@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 /**
  * 최댓값 만들기 (2)
  * <p/>
@@ -8,7 +10,18 @@ package level0;
 public class Problem120862 {
 
   public int solution(int[] numbers) {
-    int answer = 0;
-    return answer;
+    Arrays.sort(numbers);
+    int numberSize = numbers.length;
+    int answerNumber1 = numbers[0] * numbers[1];
+    int answerNumber2 = numbers[numberSize - 1] * numbers[numberSize - 2];
+    return answerNumber1 >= answerNumber2 ? answerNumber1 : answerNumber2;
+  }
+
+  public int solution1(int[] numbers) {
+    Arrays.sort(numbers);
+    int numberSize = numbers.length;
+    int answerNumber1 = numbers[0] * numbers[1];
+    int answerNumber2 = numbers[numberSize - 1] * numbers[numberSize - 2];
+    return Math.max(answerNumber1, answerNumber2);
   }
 }
