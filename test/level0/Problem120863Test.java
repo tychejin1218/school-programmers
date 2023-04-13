@@ -33,4 +33,46 @@ class Problem120863Test {
     // Then
     assertEquals(expected, result);
   }
+
+  @Test
+  void solution03() {
+
+    // Given
+    String polynomial = "1 + 2 + 3";
+    String expected = "6";
+
+    // When
+    String result = new Problem120863().solution(polynomial);
+
+    // Then
+    assertEquals(expected, result);
+  }
+
+  @Test
+  void solution04() {
+
+    // Given
+    String polynomial = "1 + x + 3";
+    String expected = "x + 4";
+
+    // When
+    String result = new Problem120863().solution(polynomial);
+
+    // Then
+    assertEquals(expected, result);
+  }
+
+  @Test
+  void solution05() {
+
+    // Given
+    String polynomial = "012x + 001";
+    String expected = "12x + 1";
+
+    // When
+    String result = new Problem120863().solution(polynomial);
+
+    // Then
+    assertEquals(expected, result);
+  }
 }
