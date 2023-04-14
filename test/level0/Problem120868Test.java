@@ -25,7 +25,7 @@ class Problem120868Test {
 
     // Given
     int[] sides = {3, 6};
-    int expected = 15
+    int expected = 5;
 
     // When
     int result = new Problem120868().solution(sides);
