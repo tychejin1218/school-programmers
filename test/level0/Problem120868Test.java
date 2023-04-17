@@ -10,11 +10,11 @@ class Problem120868Test {
   void solution01() {
 
     // Given
-    int[] sides = {1, 2};
+    int[][] dots = {{1, 4}, {9, 2}, {3, 8}, {11, 6}};
     int expected = 1;
 
     // When
-    int result = new Problem120868().solution(sides);
+    int result = new Problem120875().solution(dots);
 
     // Then
     assertEquals(expected, result);
@@ -24,28 +24,13 @@ class Problem120868Test {
   void solution02() {
 
     // Given
-    int[] sides = {3, 6};
-    int expected = 5;
+    int[][] dots = {{3, 5}, {4, 1}, {2, 4}, {5, 10}};
+    int expected = 0;
 
     // When
-    int result = new Problem120868().solution(sides);
+    int result = new Problem120875().solution(dots);
 
     // Then
     assertEquals(expected, result);
   }
-
-  @Test
-  void solution03() {
-
-    // Given
-    int[] sides = {11, 7};
-    int expected = 13;
-
-    // When
-    int result = new Problem120868().solution(sides);
-
-    // Then
-    assertEquals(expected, result);
-  }
-
 }
