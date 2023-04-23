@@ -3,7 +3,7 @@ package level0;
 /**
  * 로그인 성공?
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/120882
+ * https://school.programmers.co.kr/learn/courses/30/lessons/120883
  */
 public class Problem120883 {
 
