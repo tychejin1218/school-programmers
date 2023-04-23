@@ -12,7 +12,7 @@ class Problem120885Test {
     // Given
     String bin1 = "10";
     String bin2 = "11";
-    String expected = "result";
+    String expected = "101";
 
     // When
     String result = new Problem120885().solution(bin1, bin2);
