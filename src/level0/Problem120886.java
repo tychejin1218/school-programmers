@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 /**
  * A로 B 만들기
  * <p/>
@@ -9,8 +11,12 @@ public class Problem120886 {
 
   public int solution(String before, String after) {
 
-    int answer = 0;
+    String[] befores = before.split("");
+    Arrays.sort(befores);
 
-    return answer;
+    String[] afters = after.split("");
+    Arrays.sort(afters);
+
+    return Arrays.equals(befores, afters) == true ? 1 : 0;
   }
 }
