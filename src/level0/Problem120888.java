@@ -1,5 +1,8 @@
 package level0;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * 중복된 문자 제거
  * <p/>
@@ -8,7 +11,8 @@ package level0;
 public class Problem120888 {
 
   public String solution(String my_string) {
-    String answer = "";
-    return answer;
+    return Arrays.stream(my_string.split(""))
+        .distinct()
+        .collect(Collectors.joining());
   }
 }
