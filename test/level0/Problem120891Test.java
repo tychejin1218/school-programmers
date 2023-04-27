@@ -33,4 +33,18 @@ class Problem120891Test {
     // Then
     assertEquals(expected, result);
   }
+
+  @Test
+  void solution03() {
+
+    // Given
+    int order = 0;
+    int expected = 0;
+
+    // When
+    int result = new Problem120891().solution(order);
+
+    // Then
+    assertEquals(expected, result);
+  }
 }

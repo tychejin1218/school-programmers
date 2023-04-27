@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 /**
  * 369게임
  * <p/>
@@ -8,7 +10,9 @@ package level0;
 public class Problem120891 {
 
   public int solution(int order) {
-    int answer = 0;
-    return answer;
+    return (int) Arrays.stream(String.valueOf(order).split(""))
+        .mapToInt(Integer::parseInt)
+        .filter(p -> p != 0 && p % 3 == 0)
+        .count();
   }
 }
