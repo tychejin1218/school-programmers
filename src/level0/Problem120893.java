@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.stream.Collectors;
+
 /**
  * 대문자와 소문자
  * <p/>
@@ -7,7 +9,7 @@ package level0;
  */
 public class Problem120893 {
 
-  public String solution(String my_string) {
+  public String solution01(String my_string) {
 
     char[] myChars = my_string.toCharArray();
     for (int a = 0; a < myChars.length; a++) {
@@ -20,5 +22,14 @@ public class Problem120893 {
 
     return new String(myChars);
   }
-  
+
+  public String solution(String myString) {
+    return myString.chars()
+        .mapToObj(operand -> String.valueOf(
+            (char) (
+                Character.isLowerCase(operand) ?
+                    Character.toUpperCase(operand) : Character.toLowerCase(operand)
+            ))
+        ).collect(Collectors.joining());
+  }
 }
