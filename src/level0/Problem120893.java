@@ -8,7 +8,17 @@ package level0;
 public class Problem120893 {
 
   public String solution(String my_string) {
-    String answer = "";
-    return answer;
+
+    char[] myChars = my_string.toCharArray();
+    for (int a = 0; a < myChars.length; a++) {
+      if (Character.isUpperCase(myChars[a])) {
+        myChars[a] = Character.toLowerCase(myChars[a]);
+      } else {
+        myChars[a] = Character.toUpperCase(myChars[a]);
+      }
+    }
+
+    return new String(myChars);
   }
+  
 }
