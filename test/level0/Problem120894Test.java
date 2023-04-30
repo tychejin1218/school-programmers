@@ -19,4 +19,18 @@ class Problem120894Test {
     // Then
     assertEquals(expected, result);
   }
+
+  @Test
+  void solution02() {
+
+    // Given
+    String numbers = "onefourzerosixseven";
+    long expected = 14067;
+
+    // When
+    long result = new Problem120894().solution(numbers);
+
+    // Then
+    assertEquals(expected, result);
+  }
 }
