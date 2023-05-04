@@ -8,7 +8,18 @@ package level0;
 public class Problem120902 {
 
   public int solution(String my_string) {
-    int answer = 0;
+
+    String[] myStr = my_string.split(" ");
+
+    int answer = Integer.parseInt(myStr[0]);
+    for (int a = 1; a < myStr.length - 1; a++) {
+      if ("+".equals(myStr[a])) {
+        answer += Integer.parseInt(myStr[a + 1]);
+      } else if ("-".equals(myStr[a])) {
+        answer -= Integer.parseInt(myStr[a + 1]);
+      }
+    }
+
     return answer;
   }
 }
