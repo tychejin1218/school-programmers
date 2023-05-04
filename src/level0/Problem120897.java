@@ -2,6 +2,7 @@ package level0;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * 약수 구하기
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class Problem120897 {
 
-  public int[] solution(int n) {
+  public int[] solution01(int n) {
 
     List<Integer> divisorList = new ArrayList<>();
     for (int a = 1; a <= n; a++) {
@@ -21,6 +22,12 @@ public class Problem120897 {
 
     return divisorList.stream()
         .mapToInt(Integer::intValue)
+        .toArray();
+  }
+
+  public int[] solution(int n) {
+    return IntStream.rangeClosed(1, n)
+        .filter(p -> n % p == 0)
         .toArray();
   }
 }
