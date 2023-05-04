@@ -8,7 +8,6 @@ package level0;
 public class Problem120898 {
 
   public int solution(String message) {
-    int answer = 0;
-    return answer;
+    return message.length() * 2;
   }
 }
