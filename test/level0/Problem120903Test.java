@@ -27,7 +27,7 @@ class Problem120903Test {
     // Given
     String[] s1 = {"n", "omg"};
     String[] s2 = {"m", "dot"};
-    int expected = 2;
+    int expected = 0;
 
     // When
     int result = new Problem120903().solution(s1, s2);
