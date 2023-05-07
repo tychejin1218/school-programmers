@@ -1,5 +1,8 @@
 package level0;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 /**
  * n의 배수 고르기
  * <p/>
@@ -8,7 +11,15 @@ package level0;
 public class Problem120905 {
 
   public int[] solution(int n, int[] numlist) {
-    int[] answer = {};
-    return answer;
+    return Arrays.stream(numlist)
+        .filter(value -> value % n == 0)
+        .toArray();
+  }
+
+  public int[] solution01(int n, int[] numlist) {
+    return IntStream.range(0, numlist.length)
+        .map(index -> numlist[index])
+        .filter(value -> value % n == 0)
+        .toArray();
   }
 }
