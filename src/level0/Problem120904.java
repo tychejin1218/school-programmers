@@ -8,7 +8,7 @@ package level0;
 public class Problem120904 {
 
   public int solution(int num, int k) {
-    int answer = 0;
-    return answer;
+    int answer = String.valueOf(num).indexOf(String.valueOf(k));
+    return answer == -1 ? answer : answer + 1;
   }
 }

@@ -12,7 +12,7 @@ class Problem120904Test {
     // Given
     int num = 29183;
     int k = 1;
-    int expected = 2;
+    int expected = 3;
 
     // When
     int result = new Problem120904().solution(num, k);
