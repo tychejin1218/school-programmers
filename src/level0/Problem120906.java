@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.Arrays;
+
 /**
  * 자릿수 더하기
  * <p/>
@@ -8,7 +10,8 @@ package level0;
 public class Problem120906 {
 
   public int solution(int n) {
-    int answer = 0;
-    return answer;
+    return Arrays.stream(String.valueOf(n).split(""))
+        .mapToInt(Integer::parseInt)
+        .sum();
   }
 }
