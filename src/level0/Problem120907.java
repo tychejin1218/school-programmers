@@ -1,6 +1,7 @@
 package level0;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class Problem120907 {
 
-  public String[] solution(String[] quiz) {
+  /*public String[] solution01(String[] quiz) {
 
     List<String> answerList = new ArrayList<>();
     for (String quizStr : quiz) {
@@ -31,5 +32,19 @@ public class Problem120907 {
     }
 
     return answerList.toArray(new String[answerList.size()]);
+  }*/
+
+  public String[] solution(String[] quiz) {
+    return Arrays.stream(quiz)
+        .map(m -> {
+          String[] quizArr = m.split(" ");
+          int expected;
+          if ("+".equals(quizArr[1])) {
+            expected = Integer.parseInt(quizArr[0]) + Integer.parseInt(quizArr[2]);
+          } else {
+            expected = Integer.parseInt(quizArr[0]) - Integer.parseInt(quizArr[2]);
+          }
+          return expected == Integer.parseInt(quizArr[4]) ? "O" : "X";
+        }).toArray(String[]::new);
   }
 }
