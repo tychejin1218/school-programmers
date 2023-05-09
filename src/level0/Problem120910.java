@@ -7,8 +7,13 @@ package level0;
  */
 public class Problem120910 {
 
-  public int solution(int n, int t) {
-    int answer = 0;
+  public int solution01(int n, int t) {
+    int answer = n;
+
+    for (int a = 0; a < t; a++) {
+      answer = answer * 2;
+    }
+
     return answer;
   }
 }
