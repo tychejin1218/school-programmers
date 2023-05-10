@@ -35,4 +35,19 @@ class Problem120913Test {
     // Then
     assertArrayEquals(expected, result);
   }
+
+  @Test
+  void solution03() {
+
+    // Given
+    String my_str = "abcdef1234";
+    int n = 3;
+    String[] expected = {"abc", "def", "123", "4"};
+
+    // When
+    String[] result = new Problem120913().solution(my_str, n);
+
+    // Then
+    assertArrayEquals(expected, result);
+  }
 }
