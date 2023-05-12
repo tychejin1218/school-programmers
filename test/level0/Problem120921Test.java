@@ -65,4 +65,19 @@ class Problem120921Test {
     // Then
     assertEquals(expected, result);
   }
+
+  @Test
+  void solution05() {
+
+    // Given
+    String A = "hello";
+    String B = "elloh";
+    int expected = 4;
+
+    // When
+    int result = new Problem120921().solution(A, B);
+
+    // Then
+    assertEquals(expected, result);
+  }
 }
