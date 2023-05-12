@@ -8,7 +8,6 @@ package level0;
 public class Problem120922 {
 
   public int solution(int M, int N) {
-    int answer = 0;
-    return answer;
+    return M * N -1;
   }
 }
