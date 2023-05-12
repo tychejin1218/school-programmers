@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class Problem120921 {
 
-  public int solution(String A, String B) {
+  public int solution01(String A, String B) {
     int answer = -1;
 
     String[] aArr = Arrays.stream(A.split(""))
@@ -37,5 +37,10 @@ public class Problem120921 {
     }
 
     return answer;
+  }
+
+  public int solution(String A, String B) {
+    String repeatB = B.repeat(2);
+    return repeatB.indexOf(A);
   }
 }
