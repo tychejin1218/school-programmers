@@ -18,7 +18,7 @@ class Problem120923Test {
     int[] result = new Problem120923().solution(num, total);
 
     // Then
-    assertEquals(expected, result);
+    assertArrayEquals(expected, result);
   }
 
   @Test
@@ -33,7 +33,7 @@ class Problem120923Test {
     int[] result = new Problem120923().solution(num, total);
 
     // Then
-    assertEquals(expected, result);
+    assertArrayEquals(expected, result);
   }
 
   @Test
@@ -48,7 +48,7 @@ class Problem120923Test {
     int[] result = new Problem120923().solution(num, total);
 
     // Then
-    assertEquals(expected, result);
+    assertArrayEquals(expected, result);
   }
 
   @Test
@@ -63,7 +63,7 @@ class Problem120923Test {
     int[] result = new Problem120923().solution(num, total);
 
     // Then
-    assertEquals(expected, result);
+    assertArrayEquals(expected, result);
   }
 
 }
