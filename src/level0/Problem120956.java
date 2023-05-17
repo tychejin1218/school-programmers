@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.stream.IntStream;
+
 /**
  * 옹알이 (1)
  * <p/>
@@ -8,7 +10,17 @@ package level0;
 public class Problem120956 {
 
   public int solution(String[] babbling) {
-    int answer = 0;
-    return answer;
+    String[] tempArr = {"aya", "ye", "woo", "ma"};
+    return (int) IntStream.range(0, babbling.length)
+        .mapToObj(m -> {
+          String replaceStr = babbling[m];
+          for (String tempStr : tempArr) {
+            replaceStr = replaceStr.replaceAll(tempStr, "_");
+          }
+          replaceStr = replaceStr.replaceAll("_", "");
+          return "".equals(replaceStr) ? 1 : 0;
+        })
+        .filter(p -> p == 1)
+        .count();
   }
 }
