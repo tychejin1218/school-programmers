@@ -1,5 +1,7 @@
 package level0;
 
+import java.util.stream.IntStream;
+
 /**
  * 이차원 배열 대각선 순회하기
  * <p/>
@@ -7,7 +9,7 @@ package level0;
  */
 public class Problem181829 {
 
-  public int solution(int[][] board, int k) {
+  public int solution01(int[][] board, int k) {
     int answer = 0;
     for (int a = 0; a < board.length; a++) {
       for (int b = 0; b < board[a].length; b++) {
@@ -17,5 +19,16 @@ public class Problem181829 {
       }
     }
     return answer;
+  }
+
+  public static int solution(int[][] board, int k) {
+    return IntStream.range(0, board.length)
+        .filter(i -> i <= k)
+        .map(i ->
+            IntStream.range(0, board[i].length)
+                .filter(j -> j <= k - i)
+                .map(j -> board[i][j])
+                .sum())
+        .sum();
   }
 }
