@@ -7,14 +7,11 @@ package level0;
  */
 public class Problem181830 {
 
-  public int[][] solution(int[][] arr) {
+  public int[][] solution1(int[][] arr) {
     int[][] answer = {};
 
     int rowLen = arr.length;
     int colLen = arr[0].length;
-
-    System.out.println("rowLen : " + rowLen);
-    System.out.println("colLen : " + colLen);
 
     if (rowLen == colLen) {
       answer = arr;
@@ -38,6 +35,30 @@ public class Problem181830 {
           } else {
             answer[a][b] = arr[a][b];
           }
+        }
+      }
+    }
+
+    return answer;
+  }
+
+  public int[][] solution(int[][] arr) {
+
+    int rowLen = arr.length;
+    int colLen = arr[0].length;
+
+    if (rowLen == colLen) {
+      return arr;
+    }
+
+    int ansLen = Math.max(rowLen, colLen);
+    int[][] answer = new int[ansLen][ansLen];
+    for (int a = 0; a < ansLen; a++) {
+      for (int b = 0; b < ansLen; b++) {
+        if (a >= rowLen || b >= colLen) {
+          answer[a][b] = 0;
+        } else {
+          answer[a][b] = arr[a][b];
         }
       }
     }
