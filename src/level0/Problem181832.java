@@ -7,7 +7,7 @@ package level0;
  */
 public class Problem181832 {
 
-  public int[][] solution(int n) {
+  public int[][] solution01(int n) {
 
     int[][] answer = new int[n][n];
 
@@ -51,7 +51,7 @@ public class Problem181832 {
     return answer;
   }
 
-  public int[][] solution01(int n) {
+  public int[][] solution(int n) {
 
     int[][] answer = new int[n][n];
     int maxValue = n * n;
