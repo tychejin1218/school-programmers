@@ -1,18 +1,53 @@
 package level0;
 
-import java.util.stream.IntStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * 조건에 맞게 수열 변환하기 3
+ * 그림 확대
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181835
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181836
  */
-public class Problem181835 {
+public class Problem181836 {
 
-  public int[] solution(int[] arr, int k) {
-    String operator = k % 2 != 0 ? "*" : "+";
-    return IntStream.range(0, arr.length)
-        .map(m -> "*".equals(operator) ? arr[m] * k : arr[m] + k)
-        .toArray();
+  public String[] solution1(String[] picture, int k) {
+
+    List<String> answers = new ArrayList<>();
+    for (String row : picture) {
+      StringBuilder sb = new StringBuilder();
+      for (char pixel : row.toCharArray()) {
+        for (int i = 0; i < k; ++i) {
+          sb.append(pixel);
+        }
+      }
+      for (int i = 0; i < k; ++i) {
+        answers.add(sb.toString());
+      }
+    }
+
+    String[] answer = new String[answers.size()];
+    answer = answers.toArray(answer);
+    return answer;
+  }
+
+  public static String[] solution(String[] picture, int k) {
+    int height = picture.length;
+    int width = picture[0].length();
+
+    // 가로 세로를 k배로 늘린 그림을 저장할 새로운 배열 생성
+    int newHeight = height * k;
+    int newWidth = width * k;
+    String[] newPicture = new String[newHeight];
+
+    // 새로운 그림 배열 초기화
+    for (int i = 0; i < newHeight; i++) {
+      StringBuilder sb = new StringBuilder();
+      for (int j = 0; j < newWidth; j++) {
+        sb.append(picture[i / k].charAt(j / k));
+      }
+      newPicture[i] = sb.toString();
+    }
+
+    return newPicture;
   }
 }
