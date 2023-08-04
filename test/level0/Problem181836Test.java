@@ -10,9 +10,30 @@ class Problem181836Test {
   void solution01() {
 
     // Given
-    String[] picture = {".xx...xx.", "x..x.x..x", "x...x...x", ".x.....x.", "..x...x..", "...x.x...", "....x...."};
+    String[] picture = {
+        ".xx...xx.",
+        "x..x.x..x",
+        "x...x...x",
+        ".x.....x.",
+        "..x...x..",
+        "...x.x...",
+        "....x...."};
     int k = 2;
-    String[] expected = {"..xxxx......xxxx..", "..xxxx......xxxx..", "xx....xx..xx....xx", "xx....xx..xx....xx", "xx......xx......xx", "xx......xx......xx", "..xx..........xx..", "..xx..........xx..", "....xx......xx....", "....xx......xx....", "......xx..xx......", "......xx..xx......", "........xx........", "........xx........"};
+    String[] expected = {
+        "..xxxx......xxxx..",
+        "..xxxx......xxxx..",
+        "xx....xx..xx....xx",
+        "xx....xx..xx....xx",
+        "xx......xx......xx",
+        "xx......xx......xx",
+        "..xx..........xx..",
+        "..xx..........xx..",
+        "....xx......xx....",
+        "....xx......xx....",
+        "......xx..xx......",
+        "......xx..xx......",
+        "........xx........",
+        "........xx........"};
 
     // When
     String[] result = new Problem181836().solution(picture, k);
@@ -25,10 +46,21 @@ class Problem181836Test {
   void solution02() {
 
     // Given
-    String[] picture = {"x.x", ".x.", "x.x"};
+    String[] picture = {
+        "x.x",
+        ".x.",
+        "x.x"};
     int k = 3;
-    String[] expected = {"xxx...xxx", "xxx...xxx", "xxx...xxx", "...xxx...", "...xxx...",
-        "...xxx...", "xxx...xxx", "xxx...xxx", "xxx...xxx"};
+    String[] expected = {
+        "xxx...xxx",
+        "xxx...xxx",
+        "xxx...xxx",
+        "...xxx...",
+        "...xxx...",
+        "...xxx...",
+        "xxx...xxx",
+        "xxx...xxx",
+        "xxx...xxx"};
 
     // When
     String[] result = new Problem181836().solution(picture, k);

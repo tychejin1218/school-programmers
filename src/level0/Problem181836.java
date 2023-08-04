@@ -2,6 +2,7 @@ package level0;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * 그림 확대
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class Problem181836 {
 
-  public String[] solution1(String[] picture, int k) {
+  public String[] solution02(String[] picture, int k) {
 
     List<String> answers = new ArrayList<>();
     for (String row : picture) {
@@ -30,7 +31,7 @@ public class Problem181836 {
     return answer;
   }
 
-  public static String[] solution(String[] picture, int k) {
+  public static String[] solution01(String[] picture, int k) {
     int height = picture.length;
     int width = picture[0].length();
 
@@ -47,6 +48,26 @@ public class Problem181836 {
       }
       newPicture[i] = sb.toString();
     }
+
+    return newPicture;
+  }
+
+  public static String[] solution(String[] picture, int k) {
+    int height = picture.length;
+    int width = picture[0].length();
+
+    int newHeight = height * k;
+    int newWidth = width * k;
+
+    String[] newPicture = IntStream.range(0, newHeight)
+        .mapToObj(i -> {
+          StringBuilder sb = new StringBuilder();
+          for (int j = 0; j < newWidth; j++) {
+            sb.append(picture[i / k].charAt(j / k));
+          }
+          return sb.toString();
+        })
+        .toArray(String[]::new);
 
     return newPicture;
   }
