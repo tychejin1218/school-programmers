@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 문자열 정수의 합
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181848
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181849
  */
 public class Problem181849 {
 
