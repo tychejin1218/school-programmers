@@ -2,6 +2,7 @@ package level0.problem180000;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 배열 만들기 6
@@ -10,7 +11,7 @@ import java.util.List;
  */
 public class Problem181859 {
 
-  public int[] solution(int[] arr) {
+  public int[] solution01(int[] arr) {
 
     List<Integer> list = new ArrayList<>();
     for (int value : arr) {
@@ -32,5 +33,27 @@ public class Problem181859 {
         .toArray();
 
     return answer.length != 0 ? answer : new int[]{-1};
+  }
+
+  public int[] solution(int[] arr) {
+
+    Stack<Integer> stack = new Stack<>();
+    for (int i : arr) {
+      if (stack.isEmpty()) {
+        stack.push(i);
+      } else {
+        if (stack.peek() == i) {
+          stack.pop();
+        } else {
+          stack.push(i);
+        }
+      }
+    }
+
+    int[] answer = stack.stream()
+        .mapToInt(Integer::intValue)
+        .toArray();
+
+    return stack.isEmpty() ? new int[]{-1} : answer;
   }
 }
