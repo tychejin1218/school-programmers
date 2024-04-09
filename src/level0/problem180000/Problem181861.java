@@ -1,6 +1,8 @@
 package level0.problem180000;
 
+import java.util.Arrays;
 import java.util.Stack;
+import java.util.stream.IntStream;
 
 /**
  * 배열의 원소만큼 추가하기
@@ -9,11 +11,11 @@ import java.util.Stack;
  */
 public class Problem181861 {
 
-  public int[] solution(int[] arr) {
+  public int[] solution01(int[] arr) {
 
     Stack<Integer> stack = new Stack<>();
     int arrLen = arr.length;
-    for (int i = 0; i < arr.length; i++) {
+    for (int i = 0; i < arrLen; i++) {
       int currentElement = arr[i];
       for (int j = 0; j < currentElement; j++) {
         stack.push(currentElement);
@@ -22,6 +24,13 @@ public class Problem181861 {
 
     return stack.stream()
         .mapToInt(Integer::intValue)
+        .toArray();
+  }
+
+  public int[] solution(int[] arr) {
+    return Arrays.stream(arr)
+        .flatMap(i -> IntStream.range(0, i)
+            .map(j -> i))
         .toArray();
   }
 }
