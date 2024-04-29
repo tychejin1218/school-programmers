@@ -1,5 +1,7 @@
 package level0.problem180000;
 
+import java.util.stream.IntStream;
+
 /**
  * 수열과 구간 쿼리 1
  * <p/>
@@ -7,7 +9,7 @@ package level0.problem180000;
  */
 public class Problem181883 {
 
-  public int[] solution(int[] arr, int[][] queries) {
+  public int[] solution01(int[] arr, int[][] queries) {
     for (int i = 0; i < queries.length; i++) {
       int s = queries[i][0];
       int e = queries[i][1];
@@ -17,6 +19,17 @@ public class Problem181883 {
         }
       }
     }
+    return arr;
+  }
+
+  public int[] solution(int[] arr, int[][] queries) {
+    IntStream.range(0, queries.length)
+        .forEach(i -> {
+          int s = queries[i][0];
+          int e = queries[i][1];
+          IntStream.rangeClosed(s, e)
+              .forEach(j -> arr[j] = arr[j] + 1);
+        });
     return arr;
   }
 }
