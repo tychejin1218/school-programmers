@@ -3,7 +3,7 @@ package level0.problem180000;
 /**
  * n보다 커질 때까지 더하기
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181883
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181884
  */
 public class Problem181884 {
 
