@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 /**
  * 5명씩
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181885
+ * https://school.programmers.co.kr/learn/courses/30/lessons/1818856
  */
 public class Problem181886 {
 
