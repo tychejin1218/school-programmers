@@ -1,6 +1,5 @@
 package level0.problem180000;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -11,32 +10,20 @@ import java.util.stream.IntStream;
 public class Problem181890 {
 
   public String[] solution(String[] str_list) {
-    String[] answer = {};
-
-    int indexL = 0;
-    int indexR = 0;
 
     for (int i = 0; i < str_list.length; i++) {
-      String str = str_list[i];
-      if ("l".equals(str)) {
-        indexL = i;
-        break;
-      } else if ("r".equals(str)) {
-        indexR = i;
-        break;
+
+      if (str_list[i].equals("l")) {
+        String[] answer = new String[i];
+        System.arraycopy(str_list, 0, answer, 0, i);
+        return answer;
+      } else if (str_list[i].equals("r")) {
+        String[] answer = new String[str_list.length - i - 1];
+        System.arraycopy(str_list, i + 1, answer, 0, str_list.length - i - 1);
+        return answer;
       }
     }
-
-    if (indexL != 0) {
-      answer = IntStream.range(0, indexL)
-          .mapToObj(i -> str_list[i])
-          .toArray(String[]::new);
-    } else if (indexR != 0) {
-      answer = IntStream.range(indexR, str_list.length)
-          .mapToObj(i -> str_list[i])
-          .toArray(String[]::new);
-    }
-
-    return answer;
+    return new String[]{};
   }
+
 }
