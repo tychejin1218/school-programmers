@@ -1,6 +1,7 @@
 package level0.problem180000;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * n 번째 원소부터
@@ -9,7 +10,7 @@ import java.util.Arrays;
  */
 public class Problem181893 {
 
-  public int[] solution(int[] arr, int[] query) {
+  public int[] solution01(int[] arr, int[] query) {
 
     for (int i = 0; i < query.length; i++) {
 
@@ -31,5 +32,14 @@ public class Problem181893 {
     }
 
     return arr;
+  }
+
+  public int[] solution(int[] arr, int[] query) {
+    return IntStream.range(0, query.length)
+        .boxed()
+        .reduce(arr, (current, next) -> next % 2 == 0 ?
+                Arrays.copyOfRange(current, 0, query[next] + 1) :
+                Arrays.copyOfRange(current, query[next], current.length),
+            (a, b) -> a);
   }
 }
