@@ -24,6 +24,7 @@ public class Problem181898 {
 
   public int solution(int[] arr, int idx) {
     return IntStream.range(idx, arr.length)
+        .filter(i -> i > idx)
         .filter(i -> arr[i] == 1)
         .findFirst()
         .orElse(-1);
