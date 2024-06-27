@@ -7,7 +7,7 @@ package level0.problem181900;
  */
 public class Problem181905 {
 
-  public String solution(String my_string, int s, int e) {
+  public String solution01(String my_string, int s, int e) {
 
     int sIndex = s;
     int eIndex = e;
@@ -22,5 +22,12 @@ public class Problem181905 {
     }
 
     return String.join("", myStrings);
+  }
+
+  public String solution(String my_string, int s, int e) {
+    StringBuilder strBuilder = new StringBuilder(my_string);
+    strBuilder.replace(s, e + 1,
+        new StringBuilder(my_string.substring(s, e + 1)).reverse().toString());
+    return strBuilder.toString();
   }
 }
