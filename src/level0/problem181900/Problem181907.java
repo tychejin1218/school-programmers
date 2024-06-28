@@ -3,7 +3,7 @@ package level0.problem181900;
 /**
  * 문자열의 앞의 n글자
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181906
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181907
  */
 public class Problem181907 {
 
