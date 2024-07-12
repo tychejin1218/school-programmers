@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * 수열과 구간 쿼리 4
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181942
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181923
  */
 public class Problem181923 {
 
