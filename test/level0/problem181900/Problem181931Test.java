@@ -10,31 +10,14 @@ class Problem181931Test {
   void solution01() {
 
     // Given
-    int a = 3;
-    int b = 4;
-    boolean[] included = {true, false, false, true, true};
-    int expected = 37;
+    String code = "abc1abc1abc";
+    String expected = "acbac";
 
     // When
-    int result = new Problem181931().solution(a, b, included);
-
-    // Then
-    assertEquals(expected, result);
-  }
-
-  @Test
-  void solution02() {
-
-    // Given
-    int a = 7;
-    int b = 1;
-    boolean[] included = {false, false, false, true, false, false, false};
-    int expected = 10;
-
-    // When
-    int result = new Problem181931().solution(a, b, included);
+    String result = new Problem181932().solution(code);
 
     // Then
     assertEquals(expected, result);
   }
 }
+
