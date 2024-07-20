@@ -3,7 +3,7 @@ package level0.problem181900;
 /**
  * 조건 문자열
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181933
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181934
  */
 public class Problem181934 {
 
