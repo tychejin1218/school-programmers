@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class Problem181937Test {
+class Problem181936Test {
 
   @Test
   void solution01() {
@@ -16,7 +16,7 @@ class Problem181937Test {
     int expected = 1;
 
     // When
-    int result = new Problem181937().solution(number, n, m);
+    int result = new Problem181936().solution(number, n, m);
 
     // Then
     assertEquals(expected, result);
@@ -32,7 +32,7 @@ class Problem181937Test {
     int expected = 0;
 
     // When
-    int result = new Problem181937().solution(number, n, m);
+    int result = new Problem181936().solution(number, n, m);
 
     // Then
     assertEquals(expected, result);
