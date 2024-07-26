@@ -1,9 +1,9 @@
 package level0.problem250000;
 
 /**
- * [PCCE 기출문제] 5번 / 산책
+ * [PCCE 기출문제] 6번 / 가채점
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/250129
+ * https://school.programmers.co.kr/learn/courses/30/lessons/250128
  */
 public class Problem250128 {
 
