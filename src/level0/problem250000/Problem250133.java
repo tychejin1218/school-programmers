@@ -1,7 +1,5 @@
 package level0.problem250000;
 
-import java.util.Scanner;
-
 /**
  * [PCCE 기출문제] 1번 / 출력
  * <p/>
