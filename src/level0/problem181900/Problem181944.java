@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 홀짝 구분하기
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/181943
+ * https://school.programmers.co.kr/learn/courses/30/lessons/181944
  */
 public class Problem181944 {
 
