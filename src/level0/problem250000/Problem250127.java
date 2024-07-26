@@ -30,7 +30,7 @@ public class Problem250127 {
   public int func3(int humidity, int val_set){
     if(humidity < val_set)
       return 1;
-    return 3;
+    return 0;
   }
 
   public int solution(String mode_type, int humidity, int val_set) {
