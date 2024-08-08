@@ -7,7 +7,7 @@ package level1;
  */
 public class Problem12932 {
 
-  public int[] solution01(long n) {
+  public int[] solution(long n) {
     return new StringBuilder(String.valueOf(n))
         .reverse()
         .toString()
