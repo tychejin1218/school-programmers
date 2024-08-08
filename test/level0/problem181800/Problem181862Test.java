@@ -10,7 +10,7 @@ class Problem181862Test {
   void solution01() {
 
     // Given
-    String myStr = "baconlettucetomato"	;
+    String myStr = "baconlettucetomato";
     String[] expected = {"onlettu", "etom", "to"};
 
     // When
@@ -24,7 +24,7 @@ class Problem181862Test {
   void solution02() {
 
     // Given
-    String myStr = "abcd"	;
+    String myStr = "abcd";
     String[] expected = {"d"};
 
     // When
@@ -38,7 +38,7 @@ class Problem181862Test {
   void solution03() {
 
     // Given
-    String myStr = "cabab"	;
+    String myStr = "cabab";
     String[] expected = {"EMPTY"};
 
     // When

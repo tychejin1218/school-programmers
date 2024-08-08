@@ -10,7 +10,7 @@ class Problem181863Test {
   void solution01() {
 
     // Given
-    String rny_string = "masterpiece"	;
+    String rny_string = "masterpiece";
     String expected = "rnasterpiece";
 
     // When
@@ -24,7 +24,7 @@ class Problem181863Test {
   void solution02() {
 
     // Given
-    String rny_string = "programmers"	;
+    String rny_string = "programmers";
     String expected = "prograrnrners";
 
     // When
@@ -38,7 +38,7 @@ class Problem181863Test {
   void solution03() {
 
     // Given
-    String rny_string = "jerry"	;
+    String rny_string = "jerry";
     String expected = "jerry";
 
     // When
@@ -52,7 +52,7 @@ class Problem181863Test {
   void solution04() {
 
     // Given
-    String rny_string = "burn"	;
+    String rny_string = "burn";
     String expected = "burn";
 
     // When

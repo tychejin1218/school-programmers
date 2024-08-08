@@ -15,7 +15,7 @@ class Problem120861Test {
     int[] expected = {2, 1};
 
     // When
-    int[] result = new Problem120861().solution(keyinput,board);
+    int[] result = new Problem120861().solution(keyinput, board);
 
     // Then
     assertArrayEquals(expected, result);
@@ -30,7 +30,7 @@ class Problem120861Test {
     int[] expected = {0, -4};
 
     // When
-    int[] result = new Problem120861().solution(keyinput,board);
+    int[] result = new Problem120861().solution(keyinput, board);
 
     // Then
     assertArrayEquals(expected, result);
@@ -45,7 +45,7 @@ class Problem120861Test {
     int[] expected = {0, -1};
 
     // When
-    int[] result = new Problem120861().solution(keyinput,board);
+    int[] result = new Problem120861().solution(keyinput, board);
 
     // Then
     assertArrayEquals(expected, result);
@@ -60,7 +60,7 @@ class Problem120861Test {
     int[] expected = {0, 0};
 
     // When
-    int[] result = new Problem120861().solution(keyinput,board);
+    int[] result = new Problem120861().solution(keyinput, board);
 
     // Then
     assertArrayEquals(expected, result);

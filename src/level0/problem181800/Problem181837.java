@@ -14,7 +14,7 @@ public class Problem181837 {
         .mapToInt(o -> {
           if (o.contains("americano") || o.contains("anything")) {
             return 4500;
-          } else if(o.contains("cafelatte")){
+          } else if (o.contains("cafelatte")) {
             return 5000;
           }
           return 0;

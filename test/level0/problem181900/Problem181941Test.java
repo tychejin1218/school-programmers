@@ -10,7 +10,7 @@ class Problem181941Test {
   void solution01() {
 
     // Given
-    String[] arr = {"a","b","c"};
+    String[] arr = {"a", "b", "c"};
     String expected = "abc";
 
     // When

@@ -25,7 +25,7 @@ class Problem181866Test {
 
     // Given
     String myString = "dxccxbbbxaaaa";
-    String[] expected = {"aaaa","bbb","cc","d"};
+    String[] expected = {"aaaa", "bbb", "cc", "d"};
 
     // When
     String[] result = new Problem181866().solution(myString);

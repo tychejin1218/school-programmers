@@ -25,7 +25,8 @@ class Problem181909Test {
 
     // Given
     String my_string = "programmers";
-    String[] expected = {"ammers", "ers", "grammers", "mers", "mmers", "ogrammers", "programmers", "rammers", "rogrammers", "rs", "s"};
+    String[] expected = {"ammers", "ers", "grammers", "mers", "mmers", "ogrammers", "programmers",
+        "rammers", "rogrammers", "rs", "s"};
 
     // When
     String[] result = new Problem181909().solution(my_string);

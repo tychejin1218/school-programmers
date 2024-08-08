@@ -14,7 +14,6 @@ class Problem12915Test {
     int n = 1;
     String[] expected = {"car", "bed", "sun"};
 
-
     // When
     String[] result = new Problem12915().solution(strings, n);
 
@@ -29,7 +28,6 @@ class Problem12915Test {
     String[] strings = {"abce", "abcd", "cdx"};
     int n = 2;
     String[] expected = {"abcd", "abce", "cdx"};
-
 
     // When
     String[] result = new Problem12915().solution(strings, n);

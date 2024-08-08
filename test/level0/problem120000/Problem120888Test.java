@@ -11,7 +11,7 @@ class Problem120888Test {
 
     // Given
     String my_string = "people";
-    String expected  = "peol";
+    String expected = "peol";
 
     // When
     String result = new Problem120888().solution(my_string);
@@ -25,7 +25,7 @@ class Problem120888Test {
 
     // Given
     String my_string = "We are the world";
-    String expected  = "We arthwold";
+    String expected = "We arthwold";
 
     // When
     String result = new Problem120888().solution(my_string);

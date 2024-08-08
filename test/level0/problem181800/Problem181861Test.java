@@ -33,6 +33,7 @@ class Problem181861Test {
     // Then
     assertArrayEquals(expected, result);
   }
+
   @Test
   void solution03() {
 

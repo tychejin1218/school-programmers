@@ -8,7 +8,7 @@ package level0.problem181800;
 public class Problem181865 {
 
   public int solution(String binomial) {
-    
+
     String[] binomials = binomial.split(" ");
 
     int a = Integer.parseInt(binomials[0]);

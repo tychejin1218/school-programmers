@@ -10,6 +10,6 @@ public class Problem120816 {
   public int solution(int slice, int n) {
     int quotient = n / slice;
     int remainder = n % slice;
-    return remainder > 0 ? quotient + 1 :quotient;
+    return remainder > 0 ? quotient + 1 : quotient;
   }
 }

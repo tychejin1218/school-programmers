@@ -24,8 +24,8 @@ class Problem181875Test {
   void solution02() {
 
     // Given
-    String[] strArr = {"aBc","AbC"};
-    String[] expected = {"abc","ABC"};
+    String[] strArr = {"aBc", "AbC"};
+    String[] expected = {"abc", "ABC"};
 
     // When
     String[] result = new Problem181875().solution(strArr);

@@ -9,10 +9,10 @@ import java.util.Arrays;
  */
 public class Problem12935 {
 
-    public int[] solution(int[] arr) {
-        int min = Arrays.stream(arr).min().getAsInt();
-        return arr.length == 1 ?
-                new int[]{-1} :
-                Arrays.stream(arr).filter(i -> i != min).toArray();
-    }
+  public int[] solution(int[] arr) {
+    int min = Arrays.stream(arr).min().getAsInt();
+    return arr.length == 1 ?
+        new int[]{-1} :
+        Arrays.stream(arr).filter(i -> i != min).toArray();
+  }
 }

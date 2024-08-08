@@ -37,7 +37,7 @@ public class Problem181844 {
   }
 
   public int[] solution02(int[] arr, int[] delete_list) {
-    
+
     Set<Integer> deletes = Arrays.stream(delete_list)
         .boxed()
         .collect(Collectors.toSet());

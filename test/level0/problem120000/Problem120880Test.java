@@ -25,7 +25,7 @@ class Problem120880Test {
   void solution02() {
 
     // Given
-    int[] numlist = {10000,20,36,47,40,6,10,7000};
+    int[] numlist = {10000, 20, 36, 47, 40, 6, 10, 7000};
     int n = 30;
     int[] expected = {36, 40, 20, 47, 10, 6, 7000, 10000};
 
