@@ -1,5 +1,7 @@
 package level1;
 
+import java.util.stream.IntStream;
+
 /**
  * [1차] 비밀지도
  * <p/>
@@ -7,26 +9,29 @@ package level1;
  */
 public class Problem17681 {
 
-  public String[] solution(int n, int[] arr1, int[] arr2) {
-    String[] answer = {};
+  public String[] solution01(int n, int[] arr1, int[] arr2) {
+    String[] answer = new String[n];
 
-    String[] binaryArr1 = new String[arr1.length];
-    for (int i = 0; i < arr1.length; i++) {
-      binaryArr1[i] = Integer.toBinaryString(arr1[i]);
+    for (int i = 0; i < n; i++) {
+      StringBuilder binaryString = new StringBuilder(
+          Integer.toBinaryString(arr1[i] | arr2[i]));
+      while (binaryString.length() < n) {
+        binaryString.insert(0, '0');
+      }
+      answer[i] = binaryString.toString()
+          .replaceAll("1", "#")
+          .replaceAll("0", " ");
     }
-
-    String[] binaryArr2 = new String[arr2.length];
-    for (int i = 0; i < arr1.length; i++) {
-      binaryArr2[i] = Integer.toBinaryString(arr2[i]);
-    }
-
-    String[] binaryArrSum = new String[arr1.length];
-    for (int i = 0; i < binaryArr1.length; i++) {
-      binaryArrSum[i] = String.format("%5s",
-          String.valueOf(
-              Integer.parseInt(binaryArr1[i]) + Integer.parseInt(binaryArr2[i])).replace(' ', '0'));
-    }
-
     return answer;
+  }
+
+  public String[] solution(int n, int[] arr1, int[] arr2) {
+    return IntStream.range(0, n)
+        .mapToObj(i ->
+            String.format("%" + n + "s",
+                    Integer.toBinaryString(arr1[i] | arr2[i]))
+                .replaceAll("1", "#")
+                .replaceAll("0", " "))
+        .toArray(String[]::new);
   }
 }
