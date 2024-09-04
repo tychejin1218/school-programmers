@@ -1,42 +1,33 @@
 package level1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * 약수의 개수와 덧셈
+ * 숫자 문자열과 영단어
  * <p/>
- * https://school.programmers.co.kr/learn/courses/30/lessons/77884
+ * https://school.programmers.co.kr/learn/courses/30/lessons/81301
  */
-public class Problem77884 {
+public class Problem81301 {
 
-  public int solution(int left, int right) {
+  public int solution(String s) {
 
-    List<Integer> answerList = new ArrayList<>();
+    Map<String, String> map = new HashMap<>();
+    map.put("zero", "0");
+    map.put("one", "1");
+    map.put("two", "2");
+    map.put("three", "3");
+    map.put("four", "4");
+    map.put("five", "5");
+    map.put("six", "6");
+    map.put("seven", "7");
+    map.put("eight", "8");
+    map.put("nine", "9");
 
-    for (int i = left; i <= right; i++) {
-      for (int j = 1; j <= i; j++) {
-        int count = 0;
-        for (int k = 1; k * k <= j; k++) {
-          if (j % k == 0) {
-            count++;
-            if (j / k != k) {
-              count++;
-            }
-          }
-        }
-        if (j == i) {
-          if (count % 2 == 0) {
-            answerList.add(i);
-          } else {
-            answerList.add(i * -1);
-          }
-        }
-      }
+    for (String key : map.keySet()) {
+      s = s.replaceAll(key, map.get(key));
     }
 
-    return answerList.stream()
-        .mapToInt(Integer::intValue)
-        .sum();
+    return Integer.parseInt(s);
   }
 }
