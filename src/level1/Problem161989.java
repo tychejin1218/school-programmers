@@ -7,7 +7,7 @@ package level1;
  */
 public class Problem161989 {
 
-  public int solution(int n, int m, int[] section) {
+  public int solution01(int n, int m, int[] section) {
 
     int answer = 0;
 
@@ -35,6 +35,28 @@ public class Problem161989 {
       if (m >= sectionDiff) {
         answer++;
       }
+    }
+
+    return answer;
+  }
+
+  public int solution(int n, int m, int[] section) {
+
+    int answer = 0;
+
+    int sectionIdx = 0;
+    int sectionLen = section.length;
+
+    while (sectionIdx < sectionLen) {
+
+      int startSectionVal = section[sectionIdx];
+      int endSectionVal = startSectionVal + m - 1;
+
+      while (sectionIdx < sectionLen && section[sectionIdx] <= endSectionVal) {
+        sectionIdx++;
+      }
+
+      answer++;
     }
 
     return answer;
