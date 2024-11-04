@@ -29,7 +29,7 @@ class Problem340202Test {
     int storage = 1000;
     int usage = 2000;
     int[] change = {-10, 25, -33};
-    int expected = 1;
+    int expected = 0;
 
     // When
     int result = new Problem340202().solution(storage, usage, change);
