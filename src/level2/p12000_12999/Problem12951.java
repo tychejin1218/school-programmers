@@ -1,4 +1,4 @@
-package level02.p12000_12999;
+package level2.p12000_12999;
 
 /**
  * JadenCase 문자열 만들기

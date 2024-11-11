@@ -1,4 +1,4 @@
-package level02.p12000_12999;
+package level2.p12000_12999;
 
 import static org.junit.jupiter.api.Assertions.*;
 

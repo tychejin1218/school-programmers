@@ -1,4 +1,4 @@
-package level02.p70000_79999;
+package level2.p70000_79999;
 
 /**
  * 이진 변환 반복하기

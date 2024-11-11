@@ -1,4 +1,4 @@
-package level02.p70000_79999;
+package level2.p70000_79999;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 

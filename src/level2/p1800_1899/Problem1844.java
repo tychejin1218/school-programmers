@@ -1,4 +1,4 @@
-package level02.p1800_1899;
+package level2.p1800_1899;
 
 import java.util.LinkedList;
 import java.util.Queue;
