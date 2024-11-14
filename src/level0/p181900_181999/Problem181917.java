@@ -1,7 +1,5 @@
 package level0.p181900_181999;
 
-import java.util.stream.Stream;
-
 /**
  * 간단한 논리 연산
  * <p/>
@@ -10,9 +8,12 @@ import java.util.stream.Stream;
 public class Problem181917 {
 
   public boolean solution(boolean x1, boolean x2, boolean x3, boolean x4) {
-    long count = Stream.of(x1, x2, x3, x4)
-        .mapToInt(i -> i ? 1 : 0)
-        .sum();
-    return count % 2 == 0;
+    return (x1 || x2) && (x3 || x4);
   }
 }
+
+// x	y	x ∨ y	x ∧ y
+// 1	1	  1    	1
+// 1	0	  1   	0
+// 0	1	  1	    0
+// 0	0	  0	    0
