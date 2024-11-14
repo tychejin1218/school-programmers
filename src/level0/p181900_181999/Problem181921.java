@@ -3,7 +3,7 @@ package level0.p181900_181999;
 import java.util.stream.IntStream;
 
 /**
- * 카운트 업
+ * 배열 만들기 2
  * <p/>
  * https://school.programmers.co.kr/learn/courses/30/lessons/181921
  */
@@ -25,8 +25,9 @@ public class Problem181921 {
   }
 
   public int[] solution(int l, int r) {
-    return IntStream.rangeClosed(l, r)
+    int[] answer = IntStream.rangeClosed(l, r)
         .filter(i -> i % 5 == 0 && String.valueOf(i).matches("[50]*"))
         .toArray();
+    return answer.length > 0 ? answer : new int[]{-1};
   }
 }
