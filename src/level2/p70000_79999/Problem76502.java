@@ -36,7 +36,6 @@ public class Problem76502 {
           .replaceAll("\\(\\)", "")
           .replaceAll("\\{}", "");
     }
-    System.out.println(replaceS);
 
     return replaceS.isEmpty();
   }
