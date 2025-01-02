@@ -12,7 +12,6 @@ CREATE TABLE FOOD_WAREHOUSE (
     FREEZER_YN VARCHAR(1)
 );
 
-
 -- INSERT 문
 INSERT
   INTO FOOD_WAREHOUSE (WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, TLNO, FREEZER_YN)
@@ -22,8 +21,7 @@ VALUES ('WH0001', '창고_경기1', '경기도 안산시 상록구 용담로 141
        ('WH0004', '창고_경기3', '경기도 김포시 대곶면 율생중앙로205번길', '031-671-1900', 'N'),
        ('WH0005', '창고_충남1', '충청남도 천안시 동남구 광덕면 신덕리1길 9', '041-876-5421', 'Y');
 
-
--- SELECT 절
+-- SELECT 문
 SELECT WAREHOUSE_ID
      , WAREHOUSE_NAME
      , ADDRESS
